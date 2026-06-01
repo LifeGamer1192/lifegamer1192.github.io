@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>メニュー</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: system-ui, -apple-system, 'Segoe UI', 'Hiragino Kaku Gothic ProN',
+          'Meiryo', sans-serif;
+      }
+
+      * { box-sizing: border-box; }
+
+      body {
+        margin: 0;
+        padding: 36px 16px 64px;
+        background: #1b1f24;
+        color: #e8e8e8;
+        min-height: 100vh;
+        line-height: 1.55;
+      }
+
+      .container {
+        max-width: 720px;
+        margin: 0 auto;
+      }
+
+      h1 {
+        margin: 0 0 6px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        letter-spacing: 0.04em;
+      }
+
+      .intro {
+        margin: 0 0 28px;
+        font-size: 0.85rem;
+        color: #9aa0a6;
+      }
+
+      .grid {
+        display: grid;
+        gap: 14px;
+      }
+
+      .card {
+        display: block;
+        padding: 16px 18px;
+        border-radius: 12px;
+        background: #262b32;
+        border: 1px solid #3a4049;
+        color: inherit;
+        text-decoration: none;
+        transition: background 0.15s ease, border-color 0.15s ease, transform 0.15s ease;
+      }
+
+      .card:hover,
+      .card:focus-visible {
+        background: #2f353d;
+        border-color: #4caf50;
+        transform: translateY(-1px);
+        outline: none;
+      }
+
+      .card--external {
+        border-style: dashed;
+      }
+
+      .card--external:hover,
+      .card--external:focus-visible {
+        border-color: #5cc8ff;
+      }
+
+      .card__head {
+        display: flex;
+        align-items: baseline;
+        gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 6px;
+      }
+
+      .card__title {
+        font-size: 1.05rem;
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .card__tag {
+        font-size: 0.72rem;
+        color: #9aa0a6;
+        font-variant-numeric: tabular-nums;
+      }
+
+      .card__lines p {
+        margin: 2px 0;
+        font-size: 0.86rem;
+        color: #cfd3d8;
+      }
+
+      .footer {
+        margin-top: 32px;
+        font-size: 0.72rem;
+        color: #6a7079;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>メニュー</h1>
+      <p class="intro">公開しているプロジェクトの一覧。カードをクリックで各サイトへ移動します。</p>
+
+      <div class="grid">
+        <a class="card" href="https://lifegamer1192.github.io/ReversiCoach/">
+          <div class="card__head">
+            <span class="card__title">ReversiCoach</span>
+            <span class="card__tag">/ReversiCoach/</span>
+          </div>
+          <div class="card__lines">
+            <p>リバーシ（オセロ）をプレイしながら手筋を学べる上達支援ゲーム。</p>
+            <p>1〜5手読みのコミカルな 6 キャラクターから対戦相手を選べる。</p>
+            <p>ガイド（次の手の色分け）、対局後の詳細レビュー、戦績記録を搭載。</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://lifegamer1192.github.io/life/">
+          <div class="card__head">
+            <span class="card__title">life — Ecosystem Simulator</span>
+            <span class="card__tag">/life/</span>
+          </div>
+          <div class="card__lines">
+            <p>純粋な HTML + JavaScript で動く、ブラウザ完結の生態系シミュレータ。</p>
+            <p>元はライフゲームで、植物・草食動物・肉食動物が共存する系へ拡張中。</p>
+            <p>60×65 のトーラスグリッドに 温度・湿度・地形（水域・岩）を持つ最新 v18。</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://lifegamer1192.github.io/farm-proto/">
+          <div class="card__head">
+            <span class="card__title">farm-proto</span>
+            <span class="card__tag">/farm-proto/</span>
+          </div>
+          <div class="card__lines">
+            <p>RimWorld / Dwarf Fortress 影響の、農業と季節をテーマにしたコロニーシム試作。</p>
+            <p>タイルごとに 標高・肥沃度・湿度・日射 など複数の地形パラメータを持つ。</p>
+            <p>Canvas 描画で、地形・肥沃度・湿度・日射の分布をビュー切替で可視化。</p>
+          </div>
+        </a>
+
+        <a class="card" href="https://lifegamer1192.github.io/alb/">
+          <div class="card__head">
+            <span class="card__title">alb — Auto Battle Lab</span>
+            <span class="card__tag">/alb/</span>
+          </div>
+          <div class="card__lines">
+            <p>オートバトラー／アイドルローグライクの小規模 HTML/JS デモ。</p>
+            <p>ビルド構築（キャラ・職業・神・スキル）とダンジョン生成を実験。</p>
+            <p>バージョン選択ランディングから最新の v3 デモへ遷移できる。</p>
+          </div>
+        </a>
+
+        <a
+          class="card card--external"
+          href="https://github.com/LifeGamer1192/iro-logic"
+          target="_blank"
+          rel="noopener nofollow"
+        >
+          <div class="card__head">
+            <span class="card__title">iro-logic — いろロジック（初級版）</span>
+            <span class="card__tag">GitHub</span>
+          </div>
+          <div class="card__lines">
+            <p>3×3 グリッドに 🔴🟡🔵 を各行・各列1個ずつ配置する、幼児向けカラー数独。</p>
+            <p>全 20 問の唯一解保証＋色覚多様性に配慮した模様付きデザイン。</p>
+            <p>3×3×3 の「層スライス（ラテン立方）」上級モードも搭載。</p>
+          </div>
+        </a>
+      </div>
+
+      <p class="footer">© lifegamer1192</p>
+    </div>
+  </body>
+</html>
