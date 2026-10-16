@@ -100,6 +100,42 @@
         color: #cfd3d8;
       }
 
+      .card--rpg { padding: 0; overflow: hidden; }
+      .card--rpg:hover { transform: none; }
+      .card__link {
+        display: block;
+        padding: 16px 18px 10px;
+        color: inherit;
+        text-decoration: none;
+      }
+      .card__link:focus-visible { outline: 2px solid #4caf50; outline-offset: -2px; border-radius: 12px; }
+
+      .more { border-top: 1px solid #3a4049; }
+      .more summary {
+        cursor: pointer;
+        padding: 10px 18px;
+        font-size: 0.84rem;
+        color: #e0b96a;
+        list-style: none;
+        user-select: none;
+      }
+      .more summary::-webkit-details-marker { display: none; }
+      .more summary::before { content: '▸ '; display: inline-block; transition: transform 0.15s ease; }
+      .more[open] summary::before { content: '▾ '; }
+      .more summary:hover { color: #f3cf85; }
+      .more summary:focus-visible { outline: 2px solid #e0b96a; outline-offset: -2px; }
+      .more[open] summary { border-bottom: 1px dashed #3a4049; }
+      .more__body { padding: 6px 18px 16px; }
+      .more__body section { margin-top: 14px; }
+      .more__body h3 {
+        margin: 0 0 4px;
+        font-size: 0.98rem;
+        font-weight: 700;
+        color: #f3cf85;
+        letter-spacing: 0.03em;
+      }
+      .more__body p { margin: 0; font-size: 0.86rem; color: #cfd3d8; }
+
       .footer {
         margin-top: 32px;
         font-size: 0.72rem;
@@ -114,17 +150,48 @@
       <p class="intro">公開しているプロジェクトの一覧。カードをクリックで各サイトへ移動します。</p>
 
       <div class="grid">
-        <a class="card" href="https://lifegamer1192.github.io/ima-rpg-play/">
-          <div class="card__head">
-            <span class="card__title">ima-rpg — 春秋戦国 立身RPG（試作）</span>
-            <span class="card__tag">/ima-rpg-play/</span>
-          </div>
-          <div class="card__lines">
-            <p>春秋戦国の世を一人の人間として旅し、仕え、出世していくブラウザRPG。</p>
-            <p>町と大地の地図を歩き、依頼・戦い・学派・史実の物語をこなす。</p>
-            <p>主人公の行いで史実が変わり、年代記に「史実では」と変わったわけが並ぶ。</p>
-          </div>
-        </a>
+        <div class="card card--rpg">
+          <a class="card__link" href="https://lifegamer1192.github.io/ima-rpg-play/">
+            <div class="card__head">
+              <span class="card__title">ima-rpg — 春秋戦国 立身RPG（試作）</span>
+              <span class="card__tag">/ima-rpg-play/</span>
+            </div>
+            <div class="card__lines">
+              <p>春秋戦国の世を一人の人間として旅し、仕え、出世していくブラウザRPG。</p>
+              <p>町と大地の地図を歩き、依頼・戦い・学派・史実の物語をこなす。</p>
+              <p>主人公の行いで史実が変わり、年代記に「史実では」と変わったわけが並ぶ。</p>
+            </div>
+          </a>
+          <details class="more">
+            <summary>くわしく見る</summary>
+            <div class="more__body">
+              <section>
+                <h3>「李牧を、死なせない。」</h3>
+                <p>前229年、趙の名将・李牧は、秦の金を受けた郭開の讒言で斬られる——それが史実。だが、郭開の買収を王の前で暴けば？　李牧は生き、趙は滅びず、天下統一の年表そのものがずれていく。</p>
+              </section>
+              <section>
+                <h3>「奇貨居くべし。——その帳簿、誰が握る？」</h3>
+                <p>人質の公子に全財産を賭けた商人・呂不韋。王子を買った金の帳簿を、秦の旧臣たちと邯鄲で奪い合う。朝議で買収を暴けば呂不韋は相国になれず、のちの嫪毐の乱さえ起きなくなる。歴史は鎖のようにつながっている。</p>
+              </section>
+              <section>
+                <h3>「風蕭々として易水寒し。刃は、届くか。」</h3>
+                <p>荊軻の副使として咸陽へ。秦王に刃を届ければ、暗殺が成る世界もありうる。企てを秦に売るもよし、荊軻を思いとどまらせるもよし。選ぶのはあなた。</p>
+              </section>
+              <section>
+                <h3>「変えた歴史は、年代記が覚えている。」</h3>
+                <p>長平のあと、邯鄲の囲みから始皇帝の即位まで、史実の出来事は41。分岐は112通り。変わった出来事の下には灰色の小さな字で「史実では：…」、そして「変わったわけ：主人公が秦に通じて城門を開いた」のように一行が残る。</p>
+              </section>
+              <section>
+                <h3>「名もなき一人から、王の側近へ。」</h3>
+                <p>町で依頼を受け、盗賊を討ち、儒家・墨家・兵家の門をたたく。昇進の試しを越えて位を上げ、仕える国を選ぶ。旅の途中には、名馬、盗まれた剣、義兄弟の契り……数えきれない寄り道が待っている。</p>
+              </section>
+              <section>
+                <h3>「世界は、架空年代記から生まれる。」</h3>
+                <p>国々の版図や人物は、歴史シミュレータ「架空年代記」のセーブから読み込まれる。ゆくゆくは、この旅の記録を hex-sim に持ち込んで、率いた部隊で戦えるようにする予定。</p>
+              </section>
+            </div>
+          </details>
+        </div>
 
         <a class="card" href="https://lifegamer1192.github.io/imagined-tactics/">
           <div class="card__head">
