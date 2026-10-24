@@ -1,0 +1,16 @@
+{
+  "name": "元素工場",
+  "short_name": "元素工場",
+  "description": "ベルトコンベアで元素を運び、工場で分子を組み立てるゲーム",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#1d2430",
+  "theme_color": "#1d2430",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
